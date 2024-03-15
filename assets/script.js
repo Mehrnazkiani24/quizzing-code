@@ -60,3 +60,14 @@ function displayQuestion(){
     options[3].innerText = questionDB[currentQ].choiceD
 
 }
+
+
+function displaycheckanswer(e){
+  var useranswer=e.target.textContent
+  if(useranswer==questionDB[currentQ].answer){
+
+  }else{
+    
+  }
+
+}
