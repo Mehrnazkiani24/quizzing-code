@@ -10,10 +10,10 @@ quizcontainer.style.display = "none"
 
 var timerObject;
 var timerCount = 60;
-var currentQ =0
+var currentQ = 0
 var questionDB = [
     {
-        question: "What is HTML",
+        question: "What is HTML?",
         choiceA: "Hyper text markup language",
         choiceB: "Hyper texting markup literals",
         choiceC: "Hyper texting picture",
@@ -21,38 +21,46 @@ var questionDB = [
         answer: "Hyper text markup language"
     },
     {
-        question: "what is CSS",
+        question: "What is CSS?",
         choiceA: "Cascading style sheet",
-        choiceB: "studying tool",
+        choiceB: "Studying tool",
         choiceC: "Cascading tool",
-        choiceD: "website development sheet",
-        answer: "HCascading style sheet"
+        choiceD: "Website development sheet",
+        answer: "Cascading style sheet"
     },
     {
-        question: "what is JavaScript",
+        question: "What is JavaScript?",
         choiceA: "Programming tool",
-        choiceB: "computer design",
+        choiceB: "Computer design",
         choiceC: "Computer programming language",
         choiceD: "Design options",
         answer: "Computer programming language"
 
+    },
+    {
+        question: "What are APIs?",
+        choiceA: "Application Programming Interface",
+        choiceB: "computer design",
+        choiceC: "Computer programming language",
+        choiceD: "Design options",
+        answer: "Application Programming Interfac"
     }
 
 ]
 startButton.addEventListener("click", function () {
     quizcontainer.style.display = "block"
     startButton.style.display = "none"
-    setInterval(function(){
+    setInterval(function () {
         timer.innerText = timerCount
         timerCount--;
-        if(timerCount <=0){
+        if (timerCount <= 0) {
             console.log("End")
         }
-    },1000)
+    }, 1000)
     displayQuestion()
 })
 
-function displayQuestion(){
+function displayQuestion() {
     question.innerText = questionDB[currentQ].question
     options[0].innerText = questionDB[currentQ].choiceA
     options[1].innerText = questionDB[currentQ].choiceB
@@ -62,12 +70,12 @@ function displayQuestion(){
 }
 
 
-function displaycheckanswer(e){
-  var useranswer=e.target.textContent
-  if(useranswer==questionDB[currentQ].answer){
+function displaycheckanswer(e) {
+    var useranswer = e.target.textContent
+    if (useranswer == questionDB[currentQ].answer) {
 
-  }else{
-    
-  }
+    } else {
+
+    }
 
 }
