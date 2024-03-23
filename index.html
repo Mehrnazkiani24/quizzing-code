@@ -29,13 +29,23 @@
               <div class="container-fluid">
                 <ul class="d-flex justify-content-between">
                     <li>Timer: <span id="timer"></span> </li>
-                    <li>score: <span id="score"></span></li>
-                    <li>correct or incorrect: <span id="correct-incorrect"></span></li>
+                    <li>score:  <span id="score"></span></li>
+                    <li>correct or incorrect:  <span id="correct-incorrect"></span></li>
                 </ul>
               </div>
         </section>
-        <section>
-
+        <section id="user-detail" class="container" > 
+            <form>
+                <div class="mb-3">
+                  <label for="username" class="form-label">enter username</label>
+                  <input type="text" class="form-control" id="username">
+                </div>
+               
+                <button type="submit" id="saveuser" class="btn btn-primary">Submit</button>
+              </form>
+        </section>
+        <section class="container" id="highscore">
+            <a href="./highscore.html">Check High Scores</a>
         </section>
     </main>
 
